@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "Floob Quick-Add",
+    "description": "Quickly add videos to Floob from YouTube",
+    "version": "1.0.0",
+    "icons": {
+        "128": "/icons/icon_128.png"
+    },
+    "browser_action": {
+        "default_icon": "/icons/icon.png",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "scripts": ["popup.js"],
+        "persistent": false
+      },
+    "permissions": [
+        "activeTab",
+        "contextMenus",
+        "notifications",
+        "tabs"
+    ]
+}

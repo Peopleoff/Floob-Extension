@@ -18,7 +18,6 @@ function showNotifcation(title, message){
 }
 
 function sendVideo(videoURL, user) {
-    // let url = 'http://localhost:3000/addVideo';
     let url = 'https://api.floob.club/addVideo';
     let xhr = new XMLHttpRequest();
     xhr.open("POST", url, true);
@@ -39,13 +38,17 @@ function sendVideo(videoURL, user) {
     xhr.send(JSON.stringify(data));
 }
 
+
+//Define Right-Click button
 let contextMenuItem = {
     "id": "AddVideo",
     "title": "Add Video",
     "contexts": ["link", "video"]
 };
 
+//Create Right-Click option
 chrome.contextMenus.create(contextMenuItem);
+//Listen for when option is clicked.
 chrome.contextMenus.onClicked.addListener(function (info, tab) {
     if (tab.url.includes("youtube")) {
         if (info.linkUrl) {

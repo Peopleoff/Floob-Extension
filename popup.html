@@ -12,22 +12,78 @@
 <style>
     body{
         width: 200px;
+        font-family: "Roboto", sans-serif;
     }
     .version{
         font-size: 8px;
         color: grey;
     }
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 200px;
+  text-align: center;
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.modal-footer{
+    padding: 10px 0;
+    margin: 10px 0;
+    border-top: 1px solid black;
+    width: 100%;
+}
+.modal-footer footer{
+    float: right;
+}
+
 </style>
 
 <body>
     <div class="modal-header">
         <h2 class="logo">
-            <img src="/icons/icon.png" alt="Floob Logo" class="logo-icon">
+            <img src="icon.png" alt="Floob Logo" class="logo-icon">
             Floob Quick-Add <span class="version">(1.0.0)</span>
         </h2>
     </div>
     <div class="modal-content">
         <p>Quickly add videos to Floob from YouTube by right-clicking on the video</p>
+        <h3>Please Login to use Floob Quick-Add</h3>
+        <div class="login-page">
+            <div class="form">
+                <form class="login-form">
+                    <input type="text" placeholder="Username" />
+                    <input type="password" placeholder="Password" />
+                    <button id="login">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <footer>Visit <a href="https://floob.club">Floob.club</a></footer>
     </div>
 </body>
 
